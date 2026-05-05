@@ -1,0 +1,91 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+ 
+ 
+ public class Circulo  { 
+      private double diametro, radio, area, circunferencia;
+      
+      void setDiametro(double d) {
+          diametro = d;
+      }
+      double getDiametro() {
+          return diametro;
+      }
+      void setRadio() {
+          radio = diametro / 2;
+      }
+      double getRadio() {
+          return radio;
+      }
+      void setArea() {
+          area = Math.PI * Math.pow(radio, 2);
+      }
+      double getArea() {
+          return area;
+      }
+      void setCircunferencia() {
+          circunferencia = diametro * Math.PI;
+      }
+      double getCircunferencia() {
+          return circunferencia;
+      }
+      
+      public static void main (String[] args) {
+ 
+  Circulo circulo1 = new Circulo();
+  circulo1.setDiametro(10);
+  circulo1.setRadio();
+  circulo1.setArea();
+  circulo1.setCircunferencia();
+  
+  System.out.println("Circulo 1 Diametro = " + circulo1.getDiametro() );
+  System.out.println("Circulo 1 Radio = " + circulo1.getRadio() );
+  System.out.println("Circulo 1 Area = " + circulo1.getArea() );
+  System.out.println("Circulo 1 Circunferencia = " + circulo1.getCircunferencia() );
+  System.out.println();
+      }
+}
+
+class Rectangulo { 
+    private double altura, base, area, perimetro;
+    
+    void setAltura(double a) {
+        altura = a;
+    }
+    double getAltura() {
+        return altura;
+    }
+    void setBase(double b) {
+        base = b;
+    }
+    double getBase() {
+        return base;
+    }
+    void setArea() {
+        area = altura * base;
+    }
+    double getArea() {
+        return area;
+    }
+    void setPerimetro() {
+        perimetro = 2 * (altura + base);
+    }
+    double getPerimetro() {
+        return perimetro;
+    }
+    
+        public static void main (String[] args) {
+        
+    Rectangulo rectangulo1 = new Rectangulo();
+    rectangulo1.setAltura(4);
+    rectangulo1.setBase(6);
+    rectangulo1.setArea();
+    rectangulo1.setPerimetro();
+    
+    System.out.println("Rectangulo 1 Altura = " + rectangulo1.getAltura() );
+    System.out.println("Rectangulo 1 Base = " + rectangulo1.getBase() );
+    System.out.println("Rectangulo 1 Area = " + rectangulo1.getArea() );
+    System.out.println("Rectangulo 1 Perimetro = " + rectangulo1.getPerimetro() );
+        }
+    }
