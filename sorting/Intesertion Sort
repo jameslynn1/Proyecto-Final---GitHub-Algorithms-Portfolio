@@ -1,1 +1,22 @@
+public class insertionsort {
+    public static void main(String[] args) {
+        int arr[] = {9, 1, 8, 2, 7, 3, 6, 5, 4};
+        insertionSort(arr);
+        for (int i : arr) { // Iterate over all elements in the array
+            System.out.print(i + " "); // Print each element followed by a space
+        }
+    }
+
+    private static void insertionSort(int[] arr) { // Private method — not accessible outside this class
+        for (int i = 1; i < arr.length; i++) {
+            int temp = arr[i];  // Store the current element to be inserted
+            int j = i - 1;      // Start comparing with the previous element
+            while (j >= 0 && arr[j] > temp) { // Shift elements greater than temp to the right
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = temp; // Insert temp into its correct sorted position
+        }
+    }
+}
 
