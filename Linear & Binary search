@@ -1,0 +1,79 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static int linearSearch(int dato, int lista[]) {
+		int i=0;
+		int steps = 0;//cuenta los pasos que toma el método en encontrar el dato
+		int cantidadDeDatos = lista.length;
+			System.out.println("Linear Searching for: " + dato);
+		while (i <= cantidadDeDatos - 1 && (dato != lista[i])) {
+		i++;
+		steps++;
+		}
+		if ((i <= cantidadDeDatos - 1) && (dato == lista[i])) {
+		System.out.println("Steps: " + steps);
+		System.out.print("Index = ");
+		return i;
+		
+		} else {
+		    System.out.println("Linear Search -> not found");
+		return -1; //el dato no está en la lista
+		}
+	}
+	
+	public static int binarySearch(int dato, int lista[]) {
+	    int izq = 0; //inicio de la lista
+	    int der = lista.length - 1; //fin de la lista
+	    int steps = 0; //cuenta los pasos que toma el método en encontrar el dato
+	    System.out.println("Binary Searching for: " + dato);
+	   
+	    while (izq <= der) {
+	        int med = izq + (der - izq) / 2;
+	        steps++;
+	        
+	        if (lista[med] == dato) {
+	            System.out.println("Steps: " + steps);
+	            System.out.print("Index = ");
+	            return med;
+	        
+	            
+	        } if (lista[med] < dato) {
+            izq = med + 1;       // buscar en la mitad derecha
+        
+	            
+	        } else {
+            der = med - 1;      // buscar en la mitad izquierda
+            }
+	    }
+	    System.out.println("Binary Search -> not found");
+	    return -1; //el dato no está en la lista
+	}
+	
+	public static void main(String[] args) throws java.lang.Exception {
+		    
+	int[] numbers = {8, 23, 91, 100};
+	int[] numbers2 = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40};
+	
+	System.out.print("Array #1: ");
+	for (int j = 0; j < numbers.length; j++) {
+	    System.out.print(numbers[j] + ", ");
+	}
+	System.out.println();
+	System.out.println(linearSearch(100, numbers));
+	System.out.println(binarySearch(100, numbers));
+	
+	System.out.println();
+	
+	System.out.print("Array #2: ");
+	for (int j = 0; j < numbers2.length; j++) {
+	    System.out.print(numbers2[j] + ", ");
+	}
+	System.out.println();
+	System.out.println(linearSearch(40, numbers2));
+	System.out.println(binarySearch(40, numbers2));
+	}
+}
+	
