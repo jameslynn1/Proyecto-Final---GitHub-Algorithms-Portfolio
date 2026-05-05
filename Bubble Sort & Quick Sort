@@ -1,1 +1,68 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 
+public class Main {
+    public static void bubbleSort(int[] arr) {
+        int length = arr.length;
+        boolean intercambios;
+        
+        for (int i = 0; i < length - 1; i++) {
+            intercambios = false;
+            
+            for (int j = 0; j < length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    intercambios = true;
+                }
+            }
+            
+            if (!intercambios) break; //si ningun intercambio ocurre, termina el ciclo
+        }
+    }
+       public static void quickSort(int[] a, int startIndex, int endIndex){
+ 
+    if(endIndex<=startIndex || startIndex>=endIndex){}
+
+    else{ 
+        int pivot = a[startIndex]; 
+        int i = startIndex+1; int tmp; 
+
+        for(int j = startIndex+1; j<= endIndex; j++){
+            if(pivot > a[j]){
+                tmp = a[j]; 
+                a[j] = a[i]; 
+                a[i] = tmp; 
+
+                i++; 
+            }
+        }
+
+        a[startIndex] = a[i-1]; 
+        a[i-1] = pivot; 
+
+        quickSort(a, startIndex, i-2); 
+        quickSort(a, i, endIndex); 
+    }
+}
+        public static void main(String[]args) {
+            int[] numeros = {17, 9, 16, 2, 4, 5, 7, 10, 14, 18, 3, 8, 11, 19, 6, 1, 12, 15, 13};
+            System.out.println("bubbleSort: ");
+            String str = Arrays.toString(numeros);
+            System.out.println(str);
+            bubbleSort(numeros);
+            str = Arrays.toString(numeros);
+            System.out.println(str);
+            
+            System.out.println("quickSort: ");
+            int[] numeros2 = {17, 9, 16, 2, 4, 5, 7, 10, 14, 18, 3, 8, 11, 19, 6, 1, 12, 15, 13};
+            String str2 = Arrays.toString(numeros2);
+            System.out.println(str2);
+            quickSort(numeros2, 0, 18);
+            str2 = Arrays.toString(numeros2);
+            System.out.println(str2);
+        }
+    }
