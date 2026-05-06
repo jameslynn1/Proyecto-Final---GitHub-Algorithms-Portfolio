@@ -1,1 +1,38 @@
+import java.util.*;
+public class Main {
+public static void quickSort(int[] a, int startIndex, int endIndex){
+ 
+    if(endIndex<=startIndex || startIndex>=endIndex){}
 
+    else{ 
+        int pivot = a[startIndex]; 
+        int i = startIndex+1; int tmp; 
+
+        for(int j = startIndex+1; j<= endIndex; j++){
+            if(pivot > a[j]){
+                tmp = a[j]; 
+                a[j] = a[i]; 
+                a[i] = tmp; 
+
+                i++; 
+            }
+        }
+
+        a[startIndex] = a[i-1]; 
+        a[i-1] = pivot; 
+
+        quickSort(a, startIndex, i-2); 
+        quickSort(a, i, endIndex); 
+    }
+}
+public static void main(String[]args) {
+
+System.out.println("quickSort: ");
+            int[] numeros = {17, 9, 16, 2, 4, 5, 7, 10, 14, 18, 3, 8, 11, 19, 6, 1, 12, 15, 13};
+            String str = Arrays.toString(numeros);
+            System.out.println(str);
+            quickSort(numeros, 0, 18);
+            str = Arrays.toString(numeros);
+            System.out.println(str);
+	}
+}
