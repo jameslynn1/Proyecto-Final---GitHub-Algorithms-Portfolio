@@ -18,6 +18,7 @@ Empieza desde el inicio hasta encontrar el valor.
 No necesita que el arreglo esté ordenado.
 
 Ejemplo de cómo funciona:
+
 Si buscas 7 en [3, 9, 4, 1, 7]
 → compara 3, luego 9, luego 4, luego 1… hasta encontrar 7.
 
@@ -28,6 +29,7 @@ Solo funciona si el arreglo está ordenado.
 Compara con el elemento del medio para decidir si ir a la izquierda o derecha.
 
 Ejemplo:
+
 Buscar 7 en [1, 3, 4, 7, 9]
 → mira el medio (4)
 → como 7 es mayor, va a la derecha
