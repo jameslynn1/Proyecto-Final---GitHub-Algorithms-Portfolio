@@ -36,6 +36,8 @@ Buscar 7 en [1, 3, 4, 7, 9]
 → encuentra 7 rápidamente.
 
 
+
+
 **Bubble Sort, Insertion Sort, Merge Sort & Quick Sort**
 
 Son métodos que ordenan arreglos, ponen los términos en orden de menor a mayor. 
