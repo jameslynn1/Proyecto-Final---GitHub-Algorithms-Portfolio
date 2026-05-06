@@ -59,7 +59,7 @@ Son métodos que ordenan arreglos, ponen los términos en orden de menor a mayor
 | Quick Sort    | 5/10        | 8/10                | Usualmente no           | 
 
 
-**Ejemplos pasos y resultados de algoritmos.** 
+## Ejemplos pasos y resultados de algoritmos.
 
 ## Bubble Sort
 Compara elementos adyacentes e intercambia si están desordenados.
