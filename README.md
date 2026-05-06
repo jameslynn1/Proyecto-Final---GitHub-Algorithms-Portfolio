@@ -11,6 +11,28 @@ Este programa crea dos tipos de variables complejas, siendo rectángulo y círcu
 
 Son métodos de búsqueda, le indicas el dato en un arreglo que deseas buscar, y te devuelven el índice de ese dato. Linear Search busca de manera simple, ya que revisa cada índice de inicio a fin. Al ser tan simple, se tarda mucho en arreglos grandes, o si el dato se encuentra al final. Binary Search solo se puede utilizar si el arreglo está ordenado. Elimina la mitad del arreglo an cada paso, por lo que es más eficiente que Linear Search.
 
+*Linear Search (Búsqueda Lineal)*
+
+Recorre el arreglo elemento por elemento.
+Empieza desde el inicio hasta encontrar el valor.
+No necesita que el arreglo esté ordenado.
+
+Ejemplo de cómo funciona:
+Si buscas 7 en [3, 9, 4, 1, 7]
+→ compara 3, luego 9, luego 4, luego 1… hasta encontrar 7.
+
+*Binary Search (Búsqueda Binaria)*
+
+Divide el arreglo en mitades cada vez.
+Solo funciona si el arreglo está ordenado.
+Compara con el elemento del medio para decidir si ir a la izquierda o derecha.
+
+Ejemplo:
+Buscar 7 en [1, 3, 4, 7, 9]
+→ mira el medio (4)
+→ como 7 es mayor, va a la derecha
+→ encuentra 7 rápidamente.
+
 
 **Bubble Sort, Insertion Sort, Merge Sort & Quick Sort**
 
