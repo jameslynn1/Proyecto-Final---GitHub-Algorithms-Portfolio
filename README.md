@@ -2,8 +2,6 @@
 # Proyecto-Final---GitHub-Algorithms-Portfolio
 Este portfolio contiene ejemplos de programación orientada a objetos, búsqueda lineal, búsqueda binaria, bubble sort, y quick sort.
 
-<div align="center">
-
 Diego Roldán  
 James Lynn  
 John Coto  
@@ -13,7 +11,6 @@ Universidad Sagrado Corazón
 CCO 140/001  
 7 de mayo de 2026
 
-</div>
 
 **OOP (Object Oriented Programming)**
 
