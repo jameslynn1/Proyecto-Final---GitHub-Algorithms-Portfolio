@@ -1,16 +1,20 @@
 
 # Proyecto-Final---GitHub-Algorithms-Portfolio
 Este portfolio contiene ejemplos de programación orientada a objetos, búsqueda lineal, búsqueda binaria, bubble sort, y quick sort.
-/*
-Diego Roldán 
-James Lynn 
-John Coto 
-Yeidegelis Lopez 
-Diego Perez 
-Universidad Sagrado Corazón 
-CCO 140/001 
-7 de mayo de 2026 
-*/
+
+<div align="center">
+
+Diego Roldán  
+James Lynn  
+John Coto  
+Yeidegelis Lopez  
+Diego Perez  
+Universidad Sagrado Corazón  
+CCO 140/001  
+7 de mayo de 2026
+
+</div>
+
 **OOP (Object Oriented Programming)**
 
 Este programa crea dos tipos de variables complejas, siendo rectángulo y círculo. Un tipo de variable simple, como el int, solo contiene un valor. Los rectángulos y círculos contienen más valores, como su perímetro/circunferencia, area, radio/base y altura.
