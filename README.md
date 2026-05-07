@@ -72,7 +72,7 @@ Compara elementos adyacentes e intercambia si están desordenados.
 | **Pasada 3** | 12, 22, 11, **25, 34, 64, 90** | 25 se posiciona correctamente, últimos 3 ordenados |
 | **Pasada 4** | 12, 11, **22, 25, 34, 64, 90** | 22 se posiciona, últimos 4 ordenados |
 | **Pasada 5** | **11, 12, 22, 25, 34, 64, 90** | 11 se posiciona, arreglo completamente ordenado |
-| **Final** | **11, 12, 22, 25, 34, 64, 90** | ✅ Ordenado ascendente |
+| **Final** | **11, 12, 22, 25, 34, 64, 90** |  Ordenado ascendente |
 
 ## Insertion Sort
 Construye la lista ordenada insertando elementos uno por uno.
@@ -85,19 +85,19 @@ Construye la lista ordenada insertando elementos uno por uno.
 | **+12** | **12, 25, 34, 64**, 22, 11, 90 | 12 se inserta al inicio |
 | **+22** | **12, 22, 25, 34, 64**, 11, 90 | 22 se inserta entre 12 y 25 |
 | **+11** | **11, 12, 22, 25, 34, 64**, 90 | 11 se inserta al inicio |
-| **Final** | **11, 12, 22, 25, 34, 64, 90** | ✅ Toda la lista ordenada |
+| **Final** | **11, 12, 22, 25, 34, 64, 90** |  Toda la lista ordenada |
 
 ## Merge Sort
 Divide y conquista: parte en mitades y fusiona ordenadamente.
 
 | Paso | División/Fusión | Explicación |
 |------|-----------------|-------------|
-| **Inicial** | [1][2] | Arreglo original |
-| **Divide 1** | [1] │ [2] | Divide en mitades ≈ iguales |
-| **Divide 2** |  │ [1] │ [2] │  | Continúa dividiendo recursivamente |
-| **Orden base** |  │ **[1]** │ **[2]** │ **** | Subarreglos de 2 elementos ordenados |
-| **Fusiona 1** | **[1]** │ **[2]** | Fusiona pares ordenados |
-| **Final** | **11, 12, 22, 25, 34, 64, 90** | ✅ Fusión final completa |
+| **Inicial** | [12, 64, 22, 18, 34, 11, 90, 25] | Arreglo original |
+| **Divide** | [12, 64, 22, 18]  [34, 11, 90, 25] | Divide en mitades ≈ iguales |
+| **Sigue Dividiendo** |  [12] [64] [22] [18] [34] [11] [90] [25]  | Continúa dividiendo hasta tener un elemento en cada arreglo |
+| **Fusiona** | [12, 64] [18, 22] [11, 34] [25, 90] | Subarreglos de 2 elementos ordenados |
+| **Sigue Fusionando** | **[12, 18, 22, 64]** │ **[11, 25, 34, 90]** | Fusiona pares ordenados |
+| **Final** | **11, 12, 18, 22, 25, 34, 64, 90** |  Fusión final completa |
 
 ## Quick Sort
 Elige pivote, particiona y recursiona en subarreglos.
@@ -109,7 +109,7 @@ Elige pivote, particiona y recursiona en subarreglos.
 | **Izquierda** | [11,12,22,25,34, **64**] | 64 | Nuevo pivote 64 en subarreglo izquierdo |
 | **Partición** | **[2][1]** │ **64** | Todos <64 a izquierda |
 | **Izquierda** | [11,12,22,25, **34**] | 34 | Pivote 34, subarreglo ya casi ordenado |
-| **Final** | **11, 12, 22, 25, 34, 64, 90** | - | ✅ Completamente ordenado |
+| **Final** | **11, 12, 22, 25, 34, 64, 90** | - |  Completamente ordenado |
 
 
 
