@@ -13,7 +13,11 @@ Este portfolio contiene ejemplos de programación orientada a objetos, búsqueda
 
 **OOP (Object Oriented Programming)**
 
-Este programa crea dos tipos de variables complejas, siendo rectángulo y círculo. Un tipo de variable simple, como el int, solo contiene un valor. Los rectángulos y círculos contienen más valores, como su perímetro/circunferencia, area, radio/base y altura.
+OOP significa Programación Orientada a Objetos y organiza el programa usando clases y objetos.
+En StudentRecords, la clase representa el molde para crear estudiantes con información como ID, nombre y nota.
+Cada objeto, como s1 o s2, representa un estudiante diferente con sus propios datos.
+Los métodos como getLetterGrade() permiten que el objeto realice acciones, como calcular la letra de la nota del estudiante.
+
 ### Conceptos de OOP aplicados
 
 | Concepto        | Dónde aparece                                        |
