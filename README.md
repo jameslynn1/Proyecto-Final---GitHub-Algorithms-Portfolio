@@ -14,7 +14,24 @@ Este portfolio contiene ejemplos de programación orientada a objetos, búsqueda
 **OOP (Object Oriented Programming)**
 
 Este programa crea dos tipos de variables complejas, siendo rectángulo y círculo. Un tipo de variable simple, como el int, solo contiene un valor. Los rectángulos y círculos contienen más valores, como su perímetro/circunferencia, area, radio/base y altura.
+### Conceptos de OOP aplicados
 
+| Concepto        | Dónde aparece                                        |
+|-----------------|------------------------------------------------------|
+| Clase           | `StudentRecords` define el molde del objeto          |
+| Objeto          | Cada estudiante es una instancia de la clase         |
+| Encapsulamiento | Los campos son `private`; se acceden con getters     |
+| Constructor     | Inicializa cada estudiante con nombre, id y nota     |
+| Método          | `getLetterGrade()` calcula la letra de la nota       |
+
+### Ejemplo de salida
+
+```
+=== Student Records ===
+ID: 101 | Name: Ana   | Grade: 92.5 (A)
+ID: 102 | Name: Luis  | Grade: 78.0 (C)
+ID: 103 | Name: Maria | Grade: 85.3 (B)
+```
 
 ### **Linear y Binary Search**
 
