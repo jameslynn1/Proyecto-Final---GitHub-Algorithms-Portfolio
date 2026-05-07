@@ -100,7 +100,7 @@ Divide y conquista: parte en mitades y fusiona ordenadamente.
 | **Final** | **11, 12, 18, 22, 25, 34, 64, 90** |  Fusión final completa |
 
 ## Quick Sort
-## 📊 Tabla de pasos
+##  Tabla de pasos
  
 Arreglo de ejemplo: `[8, 3, 1, 7, 5, 2, 9, 4]`
  
