@@ -100,16 +100,77 @@ Divide y conquista: parte en mitades y fusiona ordenadamente.
 | **Final** | **11, 12, 18, 22, 25, 34, 64, 90** |  Fusión final completa |
 
 ## Quick Sort
-Elige pivote, particiona y recursiona en subarreglos.
-
-| Paso | Subarreglo | Pivote | Explicación |
-|------|------------|--------|-------------|
-| **Inicial** | [64, 34, 25, 12, 22, 11, **90**] | 90 | Pivote final, todos <90 van a izquierda |
-| **Partición** | **[2][1]** │ **90** | Elementos reorganizados por pivote |
-| **Izquierda** | [11,12,22,25,34, **64**] | 64 | Nuevo pivote 64 en subarreglo izquierdo |
-| **Partición** | **[2][1]** │ **64** | Todos <64 a izquierda |
-| **Izquierda** | [11,12,22,25, **34**] | 34 | Pivote 34, subarreglo ya casi ordenado |
-| **Final** | **11, 12, 22, 25, 34, 64, 90** | - |  Completamente ordenado |
-
+## 📊 Tabla de pasos
+ 
+Arreglo de ejemplo: `[8, 3, 1, 7, 5, 2, 9, 4]`
+ 
+### Partición principal — Pivote = 4, rango [0, 7]
+ 
+| Paso | Tipo     | j  | arr[j] | ¿arr[j] ≤ pivote? | Acción               | Estado del arreglo            |
+|:----:|:--------:|:--:|:------:|:-----------------:|----------------------|-------------------------------|
+| 1    |  Pivote | —  | 4      | —                 | Pivote = arr[7] = 4  | `[8, 3, 1, 7, 5, 2, 9, 4]`  |
+| 2    | Comparar | 0 | 8    |  No cambia (8 > 4)     | Sin swap, continuar  | `[8, 3, 1, 7, 5, 2, 9, 4]`  |
+| 3    |  Comparar | 1 | 3    |  Sí cambia  (3 ≤ 4)     | i=0, swap(0,1)       | `[3, 8, 1, 7, 5, 2, 9, 4]`  |
+| 4    |  Swap   | 2  | 1      |  Sí cambia (1 ≤ 4)     | i=1, swap(1,2)       | `[3, 1, 8, 7, 5, 2, 9, 4]`  |
+| 5    |  Comparar | 3 | 7    |  No cambia  (7 > 4)     | Sin swap, continuar  | `[3, 1, 8, 7, 5, 2, 9, 4]`  |
+| 6    |  Comparar | 4 | 5    |  No cambia (5 > 4)     | Sin swap, continuar  | `[3, 1, 8, 7, 5, 2, 9, 4]`  |
+| 7    |  Swap   | 5  | 2      |  Sí cambia  (2 ≤ 4)     | i=2, swap(2,5)       | `[3, 1, 2, 7, 5, 8, 9, 4]`  |
+| 8    | Comparar | 6 | 9    |  No cambia (9 > 4)     | Sin swap, continuar  | `[3, 1, 2, 7, 5, 8, 9, 4]`  |
+| 9    |  Colocado | — | 4   | —                 | Pivote → índice 3    | `[3, 1, 2, `**`4`**`, 5, 8, 9, 7]` |
+ 
+>  El **4** quedó en su posición definitiva (índice 3). Nunca más se moverá.
+ 
+---
+ 
+### Recursión izquierda — Pivote = 2, rango [0, 2]
+ 
+| Paso | Tipo       | j  | arr[j] | ¿arr[j] ≤ pivote? | Acción            | Estado            |
+|:----:|:----------:|:--:|:------:|:-----------------:|-------------------|-------------------|
+| 10   |  Pivote  | —  | 2      | —                 | Pivote = arr[2]=2 | `[3, 1, 2, ...]`  |
+| 11   |  Comparar | 0 | 3     |  No cambia  (3 > 2)  | Sin swap          | `[3, 1, 2, ...]`  |
+| 12   |  Swap    | 1  | 1      |  Sí cambia  (1 ≤ 2)  | i=0, swap(0,1)    | `[1, 3, 2, ...]`  |
+| 13   |  Colocado | — | 2     | —                 | Pivote → índice 1 | `[1, 2, 3, ...]`  |
+| 14   |  Fin     | —  | 1      | —                 | 1 sólo elemento   | `[1, ...]` ✓      |
+| 15   |  Fin     | —  | 3      | —                 | 1 sólo elemento   | `[..., 3, ...]` ✓ |
+ 
+---
+ 
+### Recursión derecha — Pivote = 7, rango [4, 7]
+ 
+| Paso | Tipo       | j  | arr[j] | ¿arr[j] ≤ pivote? | Acción            | Estado                        |
+|:----:|:----------:|:--:|:------:|:-----------------:|-------------------|-------------------------------|
+| 16   |  Pivote  | —  | 7      | —                 | Pivote = arr[7]=7 | `[..., 5, 8, 9, 7]`           |
+| 17   |  Comparar | 4 | 5     |  Sí cambia  (5 ≤ 7) | i=4, sin swap     | `[..., 5, 8, 9, 7]`           |
+| 18   |  Comparar | 5 | 8     |  No cambia (8 > 7)  | Sin swap          | `[..., 5, 8, 9, 7]`           |
+| 19   |  Comparar | 6 | 9     |  No cambia  (9 > 7) | Sin swap          | `[..., 5, 8, 9, 7]`           |
+| 20   |  Colocado | — | 7     | —                 | Pivote → índice 5 | `[..., 5, 7, 9, 8]`           |
+| 21   |  Fin     | —  | 5      | —                 | 1 sólo elemento   | `[..., 5, ...]` ✓             |
+ 
+---
+ 
+### Recursión final — Pivote = 8, rango [6, 7]
+ 
+| Paso | Tipo       | j  | arr[j] | ¿arr[j] ≤ pivote? | Acción            | Estado                  |
+|:----:|:----------:|:--:|:------:|:-----------------:|-------------------|-------------------------|
+| 22   | Pivote  | —  | 8      | —                 | Pivote = arr[7]=8 | `[..., 9, 8]`           |
+| 23   |  Comparar | 6 | 9     |  No cambia  (9 > 8)  | Sin swap          | `[..., 9, 8]`           |
+| 24   |  Colocado | — | 8     | —                 | Pivote → índice 6 | `[..., 8, 9]`           |
+| 25   | Fin     | —  | 9      | —                 | 1 sólo elemento   | `[..., 9]` ✓            |
+ 
+---
+ 
+### Resultado final
+ 
+```
+[8, 3, 1, 7, 5, 2, 9, 4]
+         ↓  25 pasos para sacar el resultado correctamente. 
+[1, 2, 3, 4, 5, 7, 8, 9] ✓
+```
+ 
+| Elemento | 1 | 2 | 3 | 4 | 5 | 7 | 8 | 9 |
+|:--------:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Índice   | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+ 
+---
 
 
