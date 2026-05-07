@@ -11,7 +11,7 @@ CCO 140/001
 
 Este portfolio contiene ejemplos de programación orientada a objetos, búsqueda lineal, búsqueda binaria, bubble sort, insertion sort, merge sort y quick sort.
 
-###**OOP (Object Oriented Programming)**
+**OOP (Object Oriented Programming)**
 
 Este programa crea dos tipos de variables complejas, siendo rectángulo y círculo. Un tipo de variable simple, como el int, solo contiene un valor. Los rectángulos y círculos contienen más valores, como su perímetro/circunferencia, area, radio/base y altura.
 
