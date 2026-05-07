@@ -1,0 +1,69 @@
+public class StudentRecords {
+
+    // ===== Atributos privados (Encapsulamiento) =====
+    private int id;
+    private String name;
+    private double grade;
+
+    // ===== Constructor =====
+    public StudentRecords(int id, String name, double grade) {
+        this.id = id;
+        this.name = name;
+        this.grade = grade;
+    }
+
+    // ===== Getters =====
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getGrade() {
+        return grade;
+    }
+
+    // ===== Método para calcular la letra =====
+    public String getLetterGrade() {
+        if (grade >= 90) {
+            return "A";
+        } else if (grade >= 80) {
+            return "B";
+        } else if (grade >= 70) {
+            return "C";
+        } else if (grade >= 60) {
+            return "D";
+        } else {
+            return "F";
+        }
+    }
+
+    // ===== Método principal =====
+    public static void main(String[] args) {
+
+        // Objetos (instancias de la clase)
+        StudentRecords s1 = new StudentRecords(101, "Ana", 92.5);
+        StudentRecords s2 = new StudentRecords(102, "Luis", 78.0);
+        StudentRecords s3 = new StudentRecords(103, "Maria", 85.3);
+
+        // Mostrar resultados
+        System.out.println("=== Student Records ===");
+
+        System.out.println("ID: " + s1.getId() +
+                " | Name: " + s1.getName() +
+                " | Grade: " + s1.getGrade() +
+                " (" + s1.getLetterGrade() + ")");
+
+        System.out.println("ID: " + s2.getId() +
+                " | Name: " + s2.getName() +
+                " | Grade: " + s2.getGrade() +
+                " (" + s2.getLetterGrade() + ")");
+
+        System.out.println("ID: " + s3.getId() +
+                " | Name: " + s3.getName() +
+                " | Grade: " + s3.getGrade() +
+                " (" + s3.getLetterGrade() + ")");
+    }
+}
