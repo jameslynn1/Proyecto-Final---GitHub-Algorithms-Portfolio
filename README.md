@@ -1,27 +1,26 @@
 
 # Proyecto-Final---GitHub-Algorithms-Portfolio
-Este portfolio contiene ejemplos de programación orientada a objetos, búsqueda lineal, búsqueda binaria, bubble sort, y quick sort.
-
 Diego Roldán  
 James Lynn  
 John Coto  
-Yeidegelis Lopez  
-Diego Perez  
+Yeidangelis Lopez  
+Diego Pérez  
 Universidad Sagrado Corazón  
 CCO 140/001  
 7 de mayo de 2026
 
+Este portfolio contiene ejemplos de programación orientada a objetos, búsqueda lineal, búsqueda binaria, bubble sort, insertion sort, merge sort y quick sort.
 
-**OOP (Object Oriented Programming)**
+###**OOP (Object Oriented Programming)**
 
 Este programa crea dos tipos de variables complejas, siendo rectángulo y círculo. Un tipo de variable simple, como el int, solo contiene un valor. Los rectángulos y círculos contienen más valores, como su perímetro/circunferencia, area, radio/base y altura.
 
 
-**Linear y Binary Search**
+### **Linear y Binary Search**
 
 Son métodos de búsqueda, le indicas el dato en un arreglo que deseas buscar, y te devuelven el índice de ese dato. Linear Search busca de manera simple, ya que revisa cada índice de inicio a fin. Al ser tan simple, se tarda mucho en arreglos grandes, o si el dato se encuentra al final. Binary Search solo se puede utilizar si el arreglo está ordenado. Elimina la mitad del arreglo an cada paso, por lo que es más eficiente que Linear Search.
 
-**Linear Search (Búsqueda Lineal)**
+### **Linear Search (Búsqueda Lineal)**
 
 Recorre el arreglo elemento por elemento.
 Empieza desde el inicio hasta encontrar el valor.
@@ -32,7 +31,7 @@ Ejemplo de cómo funciona:
 Si buscas 7 en [3, 9, 4, 1, 7]
 → compara 3, luego 9, luego 4, luego 1… hasta encontrar 7.
 
-**Binary Search (Búsqueda Binaria)**
+### **Binary Search (Búsqueda Binaria)**
 
 Divide el arreglo en mitades cada vez.
 Solo funciona si el arreglo está ordenado.
@@ -48,7 +47,7 @@ Buscar 7 en [1, 3, 4, 7, 9]
 
 
 
-**Bubble Sort, Insertion Sort, Merge Sort & Quick Sort**
+### **Bubble Sort, Insertion Sort, Merge Sort & Quick Sort**
 
 Son métodos que ordenan arreglos, ponen los términos en orden de menor a mayor. 
 
@@ -182,5 +181,21 @@ Arreglo de ejemplo: `[8, 3, 1, 7, 5, 2, 9, 4]`
 | Índice   | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
  
 ---
+## **Observaciones**
+- Binary search es más eficiente que linear search en arreglos ya ordenados.
+- Linear search es lento, pero es una buena introducción a los algoritmos de búsqueda.
+- Bubble sort e insertion sort solo se utilizan para arreglos pequeños, o para explicar algoritmos de ordenamiento a principiantes.
+- Merge sort y quick sort son de los algoritmos más rápidos de ordenamiento, pero son menos simples, ya que usan recursión.
+
+
+## **Reflexión**
+
+Durante el curso, aprendimos:
+- Cómo crear nuestros propios tipos de variables compuestas
+- Usos de los ciclos anidados
+- Cómo crear métodos de búsqueda
+- Las fortalezas y debilidades de cada algoritmo de búsqueda y ordenamiento
+- Diferencias entre variables primitivas y variables de arreglo
+
 
 
